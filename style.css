@@ -1,0 +1,90 @@
+body{
+font-family: Arial;
+background:#f4f4f4;
+padding:40px;
+}
+
+h1{
+text-align:center;
+}
+
+.container{
+background:white;
+padding:20px;
+margin-bottom:30px;
+border-radius:10px;
+}
+
+form{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+form label{
+grid-column: span 2;
+font-weight:bold;
+}
+
+form input{
+grid-column: span 2;
+padding:8px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+.botoes{
+grid-column: span 2;
+margin-top:10px;
+}
+
+button{
+padding:10px 15px;
+border:none;
+border-radius:5px;
+background:#2c7be5;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#1a5edb;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+}
+
+table th, table td{
+padding:10px;
+border:1px solid #ddd;
+text-align:center;
+}
+
+.editar{
+background:#f0ad4e;
+}
+
+.deletar{
+background:#d9534f;
+}
+
+.hide{
+    display: none;
+}
+
+.cpfcnpj.valido{
+
+border:2px solid #22c55e !important;
+background:#f0fdf4;
+
+}
+
+.cpfcnpj.invalido{
+
+border:2px solid #ef4444 !important;
+background:#fef2f2;
+
+}

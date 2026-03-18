@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>CRUD Clientes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h1>Cadastro de Clientes</h1>
+
+<div class="container">
+
+<form id="clienteForm">
+
+<input type="hidden" id="id">
+
+<label>Nome</label>
+<input type="text" id="nome" required>
+
+<label>CPF/CNPJ</label>
+<input id="cpf_cnpj" class="cpfcnpj">
+
+<label>Telefone</label>
+<input type="text" id="telefone">
+
+<label>Email</label>
+<input type="email" id="email">
+
+<label>Endereço</label>
+<input type="text" id="endereco">
+
+<label>Cidade</label>
+<input type="text" id="cidade">
+
+<label>Estado</label>
+<input type="text" id="estado">
+
+<label>CEP</label>
+<input type="text" id="cep">
+
+ 
+<img class="hide" id="preview" width="120">
+<input class="hide" type="file" id="foto" onchange="previewFoto()">
+
+
+<div class="botoes">
+<button type="submit">Salvar</button>
+<button type="button" onclick="limpar()">Novo</button>
+</div>
+
+</form>
+
+</div>
+
+<h2>Lista de Clientes</h2>
+
+<table id="tabelaClientes">
+
+<thead>
+<tr>
+<th class="hide">ID</th>
+<th>Nome</th>
+<th>Telefone</th>
+<th>Email</th>
+
+</tr>
+</thead>
+
+<tbody></tbody>
+
+</table>
+
+<script src="script.js"></script>
+
+</body>
+</html>
