@@ -1,4 +1,4 @@
-body{
+/*body{
 font-family: Arial;
 background:#f4f4f4;
 padding:40px;
@@ -88,3 +88,353 @@ border:2px solid #ef4444 !important;
 background:#fef2f2;
 
 }
+*/
+
+body{
+font-family: 'Inter', Arial, sans-serif;
+background: linear-gradient(135deg,#eef2ff,#f8fafc);
+padding:40px;
+margin:0;
+color:#1f2937;
+}
+
+h1, h2{
+text-align:center;
+margin-bottom:20px;
+}
+
+/* CARD FORM */
+
+.container{
+max-width:800px;
+margin:0 auto 30px auto;
+
+background:white;
+padding:30px;
+
+border-radius:16px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+
+/* FORM */
+
+form{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+}
+
+form label{
+grid-column: span 2;
+font-weight:600;
+font-size:14px;
+color:#374151;
+}
+
+form input{
+grid-column: span 2;
+
+padding:12px;
+
+border:1px solid #e5e7eb;
+border-radius:8px;
+
+font-size:14px;
+
+transition:0.2s;
+}
+
+form input:focus{
+outline:none;
+border-color:#6366f1;
+box-shadow:0 0 0 3px rgba(99,102,241,0.15);
+}
+
+
+/* BOTÕES */
+
+.botoes{
+grid-column: span 2;
+display:flex;
+gap:10px;
+margin-top:10px;
+}
+
+button{
+flex:1;
+
+padding:12px;
+
+border:none;
+border-radius:8px;
+
+background:#6366f1;
+color:white;
+
+font-weight:600;
+
+cursor:pointer;
+transition:0.2s;
+}
+
+button:hover{
+transform:translateY(-1px);
+box-shadow:0 6px 15px rgba(99,102,241,0.3);
+background:#4f46e5;
+}
+
+button[type="button"]{
+background:#9ca3af;
+}
+
+button[type="button"]:hover{
+background:#6b7280;
+}
+
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+/* BASE */
+body{
+font-family: 'Inter', sans-serif;
+background:#f6f8fb;
+color:#111827;
+padding:40px;
+}
+
+/* TITULOS */
+
+h1{
+text-align:center;
+font-size:32px;
+font-weight:700;
+margin-bottom:30px;
+letter-spacing:-0.5px;
+}
+
+h2{
+text-align:center;
+font-size:22px;
+font-weight:600;
+margin:40px 0 20px;
+color:#374151;
+}
+
+/* CARD PRINCIPAL */
+
+.container{
+max-width:900px;
+margin:0 auto;
+
+background:#ffffff;
+padding:32px;
+
+border-radius:20px;
+
+box-shadow:
+0 10px 25px rgba(0,0,0,0.05),
+0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* FORM */
+
+form{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px;
+}
+
+/* LABEL */
+
+form label{
+grid-column:span 2;
+font-size:13px;
+font-weight:600;
+color:#6b7280;
+}
+
+/* INPUT */
+
+form input{
+grid-column:span 2;
+
+padding:14px 16px;
+
+border-radius:10px;
+border:1px solid #e5e7eb;
+
+background:#f9fafb;
+
+font-size:14px;
+
+transition:all 0.25s ease;
+}
+
+/* FOCUS FANCY */
+
+form input:focus{
+outline:none;
+background:#ffffff;
+border-color:#6366f1;
+
+box-shadow:
+0 0 0 4px rgba(99,102,241,0.12);
+}
+
+/* FOTO */
+
+#preview{
+display:block;
+margin:10px auto;
+border-radius:14px;
+}
+
+/* BOTÕES */
+
+.botoes{
+grid-column:span 2;
+display:flex;
+gap:12px;
+margin-top:10px;
+}
+
+/* BOTÃO BASE */
+
+button{
+flex:1;
+
+padding:14px;
+
+border:none;
+border-radius:12px;
+
+font-size:14px;
+font-weight:600;
+
+cursor:pointer;
+
+transition:all 0.2s ease;
+}
+
+/* BOTÃO PRINCIPAL */
+
+button[type="submit"]{
+background:linear-gradient(135deg,#6366f1,#8b5cf6);
+color:white;
+
+box-shadow:0 6px 18px rgba(99,102,241,0.3);
+}
+
+button[type="submit"]:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(99,102,241,0.35);
+}
+
+/* BOTÃO SECUNDÁRIO */
+
+button[type="button"]{
+background:#eef2ff;
+color:#4f46e5;
+}
+
+button[type="button"]:hover{
+background:#e0e7ff;
+transform:translateY(-1px);
+}
+
+/* TABELA */
+
+table{
+width:100%;
+max-width:1000px;
+margin:0 auto;
+
+border-collapse:separate;
+border-spacing:0 10px;
+}
+
+/* HEADER */
+
+table thead th{
+text-align:left;
+font-size:13px;
+color:#9ca3af;
+font-weight:600;
+padding:10px 15px;
+}
+
+/* LINHAS COMO CARDS */
+
+table tbody tr{
+background:#ffffff;
+
+box-shadow:
+0 4px 10px rgba(0,0,0,0.04);
+
+border-radius:12px;
+
+transition:all 0.2s ease;
+}
+
+/* HOVER SUAVE */
+
+table tbody tr:hover{
+transform:translateY(-2px);
+box-shadow:
+0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* CELULAS */
+
+table td{
+padding:16px;
+font-size:14px;
+}
+
+/* BORDAS ARREDONDADAS NAS LINHAS */
+
+table td:first-child{
+border-radius:12px 0 0 12px;
+}
+
+table td:last-child{
+border-radius:0 12px 12px 0;
+}
+
+/* BOTÕES AÇÃO */
+
+.editar{
+background:#fbbf24 !important;
+color:#92400e;
+}
+
+.deletar{
+background:#f87171 !important;
+color:#7f1d1d;
+}
+
+/* HIDE */
+
+.hide{
+display:none;
+}
+
+/* VALIDAÇÃO */
+
+.cpfcnpj.valido{
+border:2px solid #22c55e !important;
+background:#ecfdf5;
+}
+
+.cpfcnpj.invalido{
+border:2px solid #ef4444 !important;
+background:#fef2f2;
+}
+
