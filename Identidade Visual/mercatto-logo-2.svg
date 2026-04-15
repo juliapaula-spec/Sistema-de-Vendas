@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" width="520" height="160">
+  <defs>
+    <!-- Main gradient for icon -->
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="50%" stop-color="#F7931E"/>
+      <stop offset="100%" stop-color="#FFD23F"/>
+    </linearGradient>
+
+    <!-- Text gradient -->
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1A1A2E"/>
+      <stop offset="100%" stop-color="#16213E"/>
+    </linearGradient>
+
+    <!-- Subtle glow filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Shadow for icon -->
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#FF6B35" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <!-- Background (transparent) -->
+
+  <!-- ══════════════════════════════ -->
+  <!-- ICON MARK — Stylized M + market stall roof shape -->
+  <!-- ══════════════════════════════ -->
+  <g filter="url(#shadow)">
+    <!-- Outer rounded square base -->
+    <rect x="14" y="14" width="132" height="132" rx="28" fill="url(#iconGrad)"/>
+
+    <!-- Inner dark overlay for depth -->
+    <rect x="14" y="14" width="132" height="132" rx="28" fill="#000" opacity="0.08"/>
+
+    <!-- Awning / market tenda shape — top accent -->
+    <path d="M 34 54 Q 80 38 126 54" stroke="rgba(255,255,255,0.45)" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+    <!-- Stylized M letterform — bold geometric -->
+    <!-- Left vertical -->
+    <rect x="34" y="62" width="14" height="52" rx="4" fill="white"/>
+    <!-- Right vertical -->
+    <rect x="112" y="62" width="14" height="52" rx="4" fill="white"/>
+    <!-- Left diagonal (down) -->
+    <path d="M 34 62 L 80 98 L 80 114 L 34 75 Z" fill="white"/>
+    <!-- Right diagonal (down) -->
+    <path d="M 126 62 L 80 98 L 80 114 L 126 75 Z" fill="white"/>
+
+    <!-- Center dot accent — represents the "market point" -->
+    <circle cx="80" cy="105" r="7" fill="url(#iconGrad)"/>
+    <circle cx="80" cy="105" r="4" fill="white" opacity="0.9"/>
+  </g>
+
+  <!-- ══════════════════════════════ -->
+  <!-- WORDMARK -->
+  <!-- ══════════════════════════════ -->
+
+  <!-- "mercatto" lettering -->
+  <text
+    x="172"
+    y="100"
+    font-family="'Georgia', 'Times New Roman', serif"
+    font-size="62"
+    font-weight="700"
+    letter-spacing="-2"
+    fill="#1A1A2E"
+  >merc</text>
+
+  <!-- "atto" in brand accent color -->
+  <text
+    x="340"
+    y="100"
+    font-family="'Georgia', 'Times New Roman', serif"
+    font-size="62"
+    font-weight="700"
+    letter-spacing="-2"
+    fill="#FF6B35"
+  >atto</text>
+
+  <!-- Tagline -->
+  <text
+    x="173"
+    y="126"
+    font-family="'Trebuchet MS', 'Arial', sans-serif"
+    font-size="13.5"
+    font-weight="400"
+    letter-spacing="4.5"
+    fill="#8892A4"
+    text-transform="uppercase"
+  >SISTEMA DE VENDAS</text>
+
+  <!-- Thin accent line under wordmark -->
+  <line x1="173" y1="109" x2="495" y2="109" stroke="#FF6B35" stroke-width="1.5" opacity="0.25"/>
+</svg>

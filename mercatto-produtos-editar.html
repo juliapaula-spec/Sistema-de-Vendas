@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercatto — Sistema de Vendas</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="f-center body-s-nav col p-80">
+    <!-- ID escondido --> <input type="hidden" id="idProduto">
+
+    <div class="f-center col" style="width: 100%;">
+
+        <div class="row full-w g-10">
+            <div class="c-input col"> <label class="label-i">Categoria</label> <select name="Categoria" id="Categoria"></select> </div>
+            <div class="c-input col"> <label class="label-i">Fornecedor</label> <select name="Fornecedor" id="Fornecedor"></select> </div>
+        </div>
+        <div class="row full-w g-10">
+            <div class="c-input col"> <label class="label-i">Nome Produto</label> <input id="nome" type="text"> </div>
+            <div class="c-input s-1 col"> <label class="label-i">Valor</label> <input maxlength="10" id="valor"
+                    type="text"> </div>
+        </div>
+        <div class="row full-w g-10">
+
+            <div class="c-input col"> <label class="label-i">Código de Barra</label> <input id="codigo_barra"
+                    type="number"> </div>
+
+            <div class="c-input s-2 col"> <label class="label-i">Quantidade em Estoque</label> <input id="quantidade"
+                    type="text"> </div>
+
+        </div>
+
+        <div class="c-input full-w col"> <label class="label-i">Descrição</label> <input maxlength="15" id="descricao"
+                type="text">
+        </div>
+        <div class="c-input full-w col"> <label class="label-i">Foto do produto</label> <input class="fileupload full-w"
+                id="fotoProduto" type="file"> </div>
+        <img id="previewFoto" src="img/no-foto2.png" style="width:100px; border-radius:10px;">
+    </div> <!-- BOTÕES -->
+    <!-- BOTÕES -->
+    <div class="row" style="width: 100%; margin-top: 20px;">
+        <div class="f-left">
+            <button id="btnExcluir" class="btn-m" type="button" onclick="excluirProduto()">
+                Excluir
+            </button>
+        </div>
+
+        <div class="f-right">
+            <a class="btn-b" href="mercatto-produtos.html">Cancelar</a>
+
+            <button id="btnSalvar" class="btn-m" type="button">
+                Salvar
+            </button>
+        </div>
+    </div>
+
+
+
+</body>
+<script src="js/script.js"></script>
+<script>
+    
+    document.addEventListener("DOMContentLoaded", initTelaProduto);
+
+    document.getElementById("fotoProduto").addEventListener("change", function () {
+        const file = this.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                document.getElementById("previewFoto").src = e.target.result;
+            };
+
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
+
+</html>

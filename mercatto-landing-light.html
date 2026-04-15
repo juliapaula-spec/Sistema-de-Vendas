@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mercatto — Sistema de Vendas</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/landing.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <nav id="mainNav">
+        <a href="mercatto-landing-light.html" class="logo-mark">
+            <div class="logo-icon">
+                <svg width="26" height="26" viewBox="0 0 46 46" fill="none">
+                    <path d="M 7 16 Q 23 8 39 16" stroke="rgba(255,255,255,0.55)" stroke-width="2" fill="none"
+                        stroke-linecap="round" />
+                    <rect x="7" y="19" width="5.5" height="18" rx="1.5" fill="white" />
+                    <rect x="33.5" y="19" width="5.5" height="18" rx="1.5" fill="white" />
+                    <path d="M 7 19 L 23 30 L 23 37 L 7 27 Z" fill="white" />
+                    <path d="M 39 19 L 23 30 L 23 37 L 39 27 Z" fill="white" />
+                    <circle cx="23" cy="34" r="3" fill="#FF6B35" />
+                    <circle cx="23" cy="34" r="1.5" fill="white" opacity="0.9" />
+                </svg>
+            </div>
+            <div class="logo-text">merca<span>tto</span></div>
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#funcionalidades">Funcionalidades</a></li>
+            <li><a href="#pdv">Vendas</a></li>
+            <li><a href="#equipe">Equipe</a></li>
+            <li><a href="#relatorios">Relatórios</a></li>
+        </ul>
+
+        <div class="nav-right">
+                    <a href="login.html" class="btn-b" type="button">Fazer login</a>
+        </div>
+    </nav>
+
+<!-- ══════ HERO ══════ -->
+<section class="hero" id="home">
+  <div class="hero-left">
+
+    <h1>Venda mais rápido,<br>gerencie com <em>mais inteligência</em></h1>
+
+    <p class="hero-desc">Sistema de vendas completo, gestão de equipes, controle de clientes e relatórios em tempo real. Do supermercado à boutique — uma só plataforma.</p>
+
+    <div class="hero-actions">
+      <a href="login.html" class="btn-m">Começar grátis </a>
+      <a href="#funcionalidades" class="btn-b">Ver funcionalidades</a>
+    </div>
+
+    
+<!-- 
+    <div class="hero-right">
+  
+    <div style="position:relative;">
+      <div class="dash-mock">
+        <div class="dash-topbar">
+          <div class="dash-dot dd-r"></div>
+          <div class="dash-dot dd-y"></div>
+          <div class="dash-dot dd-g"></div>
+          <span style="font-size:0.68rem;color:rgba(255,255,255,0.35);margin-left:0.6rem;">Mercatto — Dashboard</span>
+        </div>
+        <div class="dash-body">
+          <div class="dash-sidebar">
+            <div class="dash-brand">
+              <div class="dash-brand-icon">
+                <svg width="14" height="14" viewBox="0 0 46 46" fill="none">
+                  <rect x="7" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+                  <rect x="33.5" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+                  <path d="M 7 19 L 23 30 L 23 37 L 7 27 Z" fill="white"/>
+                  <path d="M 39 19 L 23 30 L 23 37 L 39 27 Z" fill="white"/>
+                </svg>
+              </div>
+              <div class="dash-brand-name">merc<span>atto</span></div>
+            </div>
+            <div class="dash-nav-item on">📊 Dashboard</div>
+            <div class="dash-nav-item">🛒 PDV / Caixa</div>
+            <div class="dash-nav-item">📦 Produtos</div>
+            <div class="dash-nav-item">👥 Clientes</div>
+            <div class="dash-nav-item">👔 Funcionários</div>
+            <div class="dash-nav-item">📈 Relatórios</div>
+            <div class="dash-nav-item">⚙️ Config.</div>
+          </div>
+          <div class="dash-main">
+            <div class="dash-row1">
+              <span class="dash-title">Visão Geral de Hoje</span>
+              <span class="dash-badge">Ao vivo</span>
+            </div>
+            <div class="dash-cards">
+              <div class="dash-card">
+                <div class="dc-label">Faturamento</div>
+                <div class="dc-val">R$ 5.2k</div>
+                <div class="dc-sub">↑ 14%</div>
+              </div>
+              <div class="dash-card">
+                <div class="dc-label">Vendas</div>
+                <div class="dc-val">217</div>
+                <div class="dc-sub">↑ 9%</div>
+              </div>
+              <div class="dash-card">
+                <div class="dc-label">Ticket Médio</div>
+                <div class="dc-val">R$ 24</div>
+                <div class="dc-sub">↑ 5%</div>
+              </div>
+            </div>
+            <div class="dash-chart">
+              <div class="chart-lbl">Vendas por hora</div>
+              <div class="chart-bars">
+                <div class="cb" style="height:28%"></div>
+                <div class="cb" style="height:42%"></div>
+                <div class="cb" style="height:35%"></div>
+                <div class="cb" style="height:60%"></div>
+                <div class="cb hi" style="height:88%"></div>
+                <div class="cb" style="height:75%"></div>
+                <div class="cb" style="height:50%"></div>
+                <div class="cb" style="height:45%"></div>
+                <div class="cb" style="height:32%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      <div class="float-card float-card-1">
+        <div class="fc-label">Melhor vendedor hoje</div>
+        <div class="fc-row">
+          <div class="fc-icon">🏆</div>
+          <div>
+            <div class="fc-val" style="font-size:0.9rem;">Ana Lima</div>
+            <div class="fc-sub">R$ 1.840 vendidos</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="float-card float-card-2">
+        <div class="fc-label">Última venda</div>
+        <div class="fc-val">R$ 87,50</div>
+        <div class="fc-sub">há 12 segundos ●</div>
+      </div>
+    </div>
+  </div>
+
+
+-->
+  
+</section>
+
+<!-- ══════ STATS BAND ══════ -->
+<div class="stats-band reveal">
+  <div><div class="sb-num">+40k</div><div class="sb-label">Transações por mês</div></div>
+  <div><div class="sb-num">99.9%</div><div class="sb-label">Uptime garantido</div></div>
+  <div><div class="sb-num">2.000+</div><div class="sb-label">Lojas ativas</div></div>
+  <div><div class="sb-num">15s</div><div class="sb-label">Tempo médio por venda</div></div>
+</div>
+
+<!-- ══════ FEATURES ══════ -->
+<section class="features-section" id="funcionalidades">
+  <div class="features-header reveal">
+    <div class="s-tag">Funcionalidades</div>
+    <h2>Tudo integrado, do caixa<br>à <em>gestão completa</em></h2>
+    <p class="s-desc">Uma plataforma pensada para o dia a dia do comércio brasileiro — ágil, confiável e fácil de usar.</p>
+  </div>
+
+  <div class="features-grid reveal">
+    <div class="feat-card">
+      <div class="feat-icon-wrap fi-orange">🛒</div>
+      <div class="feat-title">Ultra-rápido</div>
+      <p class="feat-desc">Interface de caixa pensada para velocidade. Leitura de código de barras, busca inteligente e finalização em poucos cliques.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon-wrap fi-amber">👔</div>
+      <div class="feat-title">Cadastro de Funcionários</div>
+      <p class="feat-desc">Perfis completos, controle de acesso por hierarquia, metas individuais e histórico por operador de caixa.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon-wrap fi-gold">👥</div>
+      <div class="feat-title">Gestão de Clientes</div>
+      <p class="feat-desc">Histórico de compras, fidelidade, dados de contato e segmentação para campanhas personalizadas.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon-wrap fi-navy">📈</div>
+      <div class="feat-title">Desempenho por Vendedor</div>
+      <p class="feat-desc">Dashboards individuais e comparativos. Veja ticket médio, volume de vendas e comissões automatizadas.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon-wrap fi-green">📦</div>
+      <div class="feat-title">Controle de Estoque</div>
+      <p class="feat-desc">Atualização automática a cada venda, alertas de ruptura, inventário periódico e curva ABC integrada.</p>
+    </div>
+    <div class="feat-card">
+      <div class="feat-icon-wrap fi-red">🔐</div>
+      <div class="feat-title">Administração Central</div>
+      <p class="feat-desc">Painel administrativo com visão de múltiplas lojas, permissões granulares e auditoria completa.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ PDV SECTION ══════ -->
+<section class="pdv-section" id="pdv">
+  <div class="pdv-layout">
+    <div class="reveal">
+      <div class="s-tag">Ponto de Venda</div>
+      <h2>Caixa no ritmo de<br><em>supermercado</em>,<br>para qualquer loja</h2>
+      <p class="s-desc">Interface limpa e reativa pensada para o operador. Scanneia, calcula, cobra e emite comprovante — tudo em segundos.</p>
+      <div class="check-list">
+        <div class="check-item"><div class="check-icon">✓</div>Suporte a leitor de código de barras USB e câmera</div>
+        <div class="check-item"><div class="check-icon">✓</div>Pagamentos: Pix, Crédito, Débito, Dinheiro e Vale</div>
+        <div class="check-item"><div class="check-icon">✓</div>Desconto por item, categoria ou cupom promocional</div>
+        <div class="check-item"><div class="check-icon">✓</div>Emissão de NF-e e cupom fiscal integrado</div>
+        <div class="check-item"><div class="check-icon">✓</div>Modo offline — funciona sem conexão com internet</div>
+        <div class="check-item"><div class="check-icon">✓</div>Múltiplos caixas simultâneos no mesmo estabelecimento</div>
+      </div>
+    </div>
+<!--
+     <div class="pdv-screen reveal">
+      <div class="pdv-header">
+        <div class="pdv-h-title">
+          <div style="width:20px;height:20px;border-radius:5px;background:linear-gradient(135deg,#FF6B35,#F7931E);display:flex;align-items:center;justify-content:center;">
+            <svg width="12" height="12" viewBox="0 0 46 46" fill="none"><rect x="7" y="19" width="5.5" height="18" rx="1.5" fill="white"/><rect x="33.5" y="19" width="5.5" height="18" rx="1.5" fill="white"/><path d="M 7 19 L 23 30 L 23 37 L 7 27 Z" fill="white"/><path d="M 39 19 L 23 30 L 23 37 L 39 27 Z" fill="white"/></svg>
+          </div>
+          Mercatto
+        </div>
+        <div class="pdv-h-op">Operador: Ana Lima &nbsp;|&nbsp; <span style="color:#4ade80;">● Online</span></div>
+      </div>
+      <div class="pdv-body">
+        <div class="pdv-search-bar">🔍 &nbsp;Buscar produto por nome ou código de barras...</div>
+        <div class="pdv-items">
+          <div class="pdv-item">
+            <span class="pi-name">Arroz Tio João 5kg</span>
+            <span class="pi-qty">×2</span>
+            <span class="pi-price">R$ 29,90</span>
+          </div>
+          <div class="pdv-item">
+            <span class="pi-name">Leite Integral Itambé 1L</span>
+            <span class="pi-qty">×4</span>
+            <span class="pi-price">R$ 17,60</span>
+          </div>
+          <div class="pdv-item">
+            <span class="pi-name">Óleo de Soja 900ml</span>
+            <span class="pi-qty">×1</span>
+            <span class="pi-price">R$ 6,49</span>
+          </div>
+          <div class="pdv-item">
+            <span class="pi-name">Sabão em Pó Omo 1kg</span>
+            <span class="pi-qty">×2</span>
+            <span class="pi-price">R$ 31,80</span>
+          </div>
+          <div class="pdv-item" style="opacity:0.45;">
+            <span class="pi-name">+ 3 itens...</span>
+            <span class="pi-qty">—</span>
+            <span class="pi-price">R$ 44,12</span>
+          </div>
+        </div>
+        <div class="pdv-total">
+          <div>
+            <div class="pt-label">Total da venda</div>
+            <div style="font-size:0.65rem;color:var(--muted);margin-top:2px;">12 itens &nbsp;·&nbsp; sem desconto</div>
+          </div>
+          <div class="pt-val">R$ 129,91</div>
+        </div>
+        <div class="pdv-pay-grid">
+          <div class="pay-pill pay-pix">⚡ Pix</div>
+          <div class="pay-pill pay-deb">💳 Débito</div>
+          <div class="pay-pill pay-cred">💠 Crédito</div>
+          <div class="pay-pill pay-din">💵 Dinheiro</div>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+  <!--Alterar conteudo-->
+   <h1>Inserir print de telas</h1>
+</section>
+
+<!-- ══════ TEAM SECTION ══════ -->
+<section class="team-section" id="equipe">
+  <div class="team-layout">
+    <div class="reveal">
+      <div class="s-tag">Equipe & Clientes</div>
+      <h2>Pessoas no centro<br>da <em>sua operação</em></h2>
+      <p class="s-desc">Gerencie funcionários com controle de acesso, metas e performance. Conheça seus clientes, fidelize e acompanhe tudo em tempo real.</p>
+    </div>
+<!--
+     <div class="team-cards reveal">
+      <div class="team-card">
+        <div class="tc-icon tci-o">👔</div>
+        <div class="tc-title">Funcionários</div>
+        <p class="tc-desc">Cadastro completo, cargos, permissões por módulo e histórico de atividades detalhado.</p>
+      </div>
+      <div class="team-card">
+        <div class="tc-icon tci-a">👥</div>
+        <div class="tc-title">Clientes</div>
+        <p class="tc-desc">Perfis, histórico de compras e programa de fidelidade automático.</p>
+      </div>
+      <div class="team-card span2">
+        <div class="tc-icon tci-n">🏆</div>
+        <div class="tc-title">Ranking de Performance</div>
+        <p class="tc-desc">Acompanhe metas e resultados individuais em tempo real.</p>
+        <div class="perf-rows">
+          <div class="perf-row">
+            <div class="perf-meta"><span>Ana Lima</span><span>R$ 8.420 / R$ 10k — 84%</span></div>
+            <div class="perf-track"><div class="perf-fill" style="width:84%"></div></div>
+          </div>
+          <div class="perf-row">
+            <div class="perf-meta"><span>Beatriz Souza</span><span>R$ 9.120 / R$ 10k — 91%</span></div>
+            <div class="perf-track"><div class="perf-fill" style="width:91%"></div></div>
+          </div>
+          <div class="perf-row">
+            <div class="perf-meta"><span>Carlos Melo</span><span>R$ 6.750 / R$ 10k — 67%</span></div>
+            <div class="perf-track"><div class="perf-fill" style="width:67%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+-->
+
+<h1>Inserir print de telas</h1>
+   
+  </div>
+</section>
+
+<!-- ══════ REPORTS ══════ -->
+<section class="reports-section" id="relatorios">
+  <div class="reveal">
+    <div class="s-tag">Relatórios & Dados</div>
+    <h2>Informação que faz<br>você <em>decidir melhor</em></h2>
+    <p class="s-desc">Visualizações claras e exportáveis. Do operacional ao estratégico, tudo disponível no painel.</p>
+  </div>
+
+  <div class="reports-grid reveal">
+    <div class="rep-card">
+      <div class="rep-num">01 — VENDAS</div>
+      <div class="rep-title">Vendas por Período</div>
+      <p class="rep-desc">Compare desempenho diário, semanal e mensal. Identifique sazonalidades e melhores horários.</p>
+      <div class="rep-tag rt-o">Tempo real</div>
+      <div class="rep-deco">📊</div>
+    </div>
+    <div class="rep-card">
+      <div class="rep-num">02 — EQUIPE</div>
+      <div class="rep-title">Ranking de Funcionários</div>
+      <p class="rep-desc">Classificação por volume de vendas, ticket médio, comissões e cumprimento de metas.</p>
+      <div class="rep-tag rt-a">Performance</div>
+      <div class="rep-deco">🏆</div>
+    </div>
+    <div class="rep-card">
+      <div class="rep-num">03 — ESTOQUE</div>
+      <div class="rep-title">Produtos Mais Vendidos</div>
+      <p class="rep-desc">Curva ABC de produtos, margem de lucro por SKU e alertas de ruptura antes do estoque acabar.</p>
+      <div class="rep-tag rt-g">Estoque</div>
+      <div class="rep-deco">📦</div>
+    </div>
+    <div class="rep-card">
+      <div class="rep-num">04 — FINANCEIRO</div>
+      <div class="rep-title">Fechamento de Caixa</div>
+      <p class="rep-desc">Conciliação de formas de pagamento, sangrias, suprimentos e fechamento diário automático.</p>
+      <div class="rep-tag rt-b">Financeiro</div>
+      <div class="rep-deco">💰</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════ COMMERCE TYPES ══════ -->
+<section class="commerce-section">
+  <div class="reveal">
+    <div class="s-tag">Compatibilidade</div>
+    <h2>Feito para todo<br>tipo de <em>comércio</em></h2>
+    <p class="s-desc">Um único sistema que se adapta ao seu negócio, qualquer que seja o segmento.</p>
+  </div>
+
+  <div class="commerce-grid reveal">
+    <div class="com-pill"><span class="pi">🛒</span> Supermercados</div>
+    <div class="com-pill"><span class="pi">👗</span> Lojas de Roupa</div>
+    <div class="com-pill"><span class="pi">💊</span> Farmácias</div>
+    <div class="com-pill"><span class="pi">🍕</span> Restaurantes</div>
+    <div class="com-pill"><span class="pi">🔧</span> Ferragens</div>
+    <div class="com-pill"><span class="pi">📱</span> Eletrônicos</div>
+    <div class="com-pill"><span class="pi">🌸</span> Floriculturas</div>
+    <div class="com-pill"><span class="pi">🏪</span> Mercearias</div>
+    <div class="com-pill"><span class="pi">🍦</span> Sorveterias</div>
+    <div class="com-pill"><span class="pi">💈</span> Barbearias</div>
+    <div class="com-pill"><span class="pi">🐾</span> Pet Shops</div>
+    <div class="com-pill"><span class="pi">🎮</span> Games & Eletrônicos</div>
+    <div class="com-pill"><span class="pi">🥩</span> Açougues</div>
+    <div class="com-pill"><span class="pi">🍞</span> Padarias</div>
+  </div>
+</section>
+
+<!-- ══════ CTA ══════ -->
+<section class="cta-section" id="cta">
+  <div class="s-tag reveal" style="background:rgba(255,255,255,0.2);border-color:rgba(255,255,255,0.3);color:white;">Comece hoje</div>
+  <h2 class="reveal">Pronto para transformar<br>as suas vendas?</h2>
+  <p class="s-desc reveal">14 dias grátis, sem cartão de crédito. Configure em minutos e comece a vender com mais inteligência.</p>
+  <div class="cta-actions reveal">
+    <a href="#" class="btn-white">Criar conta gratuita →</a>
+    <a href="#" class="btn-outline-white">Agendar demonstração</a>
+  </div>
+</section>
+
+<!-- ══════ FOOTER ══════ -->
+<footer>
+  <a href="#" class="logo-mark" style="text-decoration:none;">
+    <div class="logo-icon">
+      <svg width="22" height="22" viewBox="0 0 46 46" fill="none">
+        <rect x="7" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+        <rect x="33.5" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+        <path d="M 7 19 L 23 30 L 23 37 L 7 27 Z" fill="white"/>
+        <path d="M 39 19 L 23 30 L 23 37 L 39 27 Z" fill="white"/>
+        <circle cx="23" cy="34" r="3" fill="#FF6B35"/>
+        <circle cx="23" cy="34" r="1.5" fill="white" opacity="0.9"/>
+      </svg>
+    </div>
+    <div class="logo-text" style="color:white;font-size:1.1rem;">merc<span>atto</span></div>
+  </a>
+  <div class="footer-copy">© 2026 Mercatto. Todos os direitos reservados.</div>
+  <div class="footer-links">
+    <a href="#">Termos</a>
+    <a href="#">Privacidade</a>
+    <a href="#">Suporte</a>
+    <a href="#">Blog</a>
+  </div>
+</footer>
+
+<script>
+  // Nav shadow on scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Scroll reveal
+  const revEls = document.querySelectorAll('.reveal');
+  const revObs = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('revealed'), 0);
+        // stagger inner cards
+        const cards = e.target.querySelectorAll('.feat-card, .rep-card, .com-pill, .team-card');
+        cards.forEach((c, ci) => {
+          c.style.opacity = '0';
+          c.style.transform = 'translateY(18px)';
+          setTimeout(() => {
+            c.style.transition = 'opacity 0.5s ease, transform 0.5s ease, box-shadow 0.3s, border-color 0.3s';
+            c.style.opacity = '1';
+            c.style.transform = 'none';
+          }, ci * 70);
+        });
+        revObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  revEls.forEach(el => revObs.observe(el));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercatto — Sistema de Vendas</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/landing.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="f-center body-s-nav col p-80">
+    <!-- ID escondido --> 
+     <input type="hidden" id="idFuncionario">
+    <div class="f-center col" style="width: 100%;">
+        <div class="row full-w g-10">
+            <div class="c-input col"> <label class="label-i">Nome Completo</label> <input id="nome" type="text"> </div>
+            <div class="c-input s-2 cpf-mask col"> <label class="label-i">CPF</label> <input maxlength="14" id="cpf"
+                    type="text"> </div>
+        </div>
+        <div class="row full-w g-10">
+            <div class="c-input s-2 telefone-mask col"> <label class="label-i">Telefone</label> <input maxlength="15"
+                    id="telefone" type="text">
+            </div>
+            <div class="c-input col"> <label class="label-i">Email</label> <input id="email" type="text"> </div>
+        </div>
+        <div class="row full-w g-10">
+            <div class="c-input col"> <label class="label-i">Cargo</label> <select id="cargo" type="text"> <option value="">Selecione um cargo</option> <option value="VENDEDOR">Vendedor</option> <option value="GESTOR">Gestor</option> </select> </div>
+        </div>
+        <div class="row full-w g-10">
+            <div class="c-input col"> <label class="label-i">Salário</label> <input id="salario" type="text"> </div>
+            <div class="c-input s-2 col"> <label class="label-i">Data Admissão</label> <input id="dataAdmissao" type="date"> </div>
+        </div>
+        <div class="c-input full-w col"> <label class="label-i">Foto do Funcionário</label> <input class="fileupload full-w"
+                id="fotoFuncionario" type="file"> </div>
+                <img id="previewFotoFuncionario" src="img/no-foto.png" style="width:100px; border-radius:50%;">
+    </div> <!-- BOTÕES -->
+    <div class="row" style="width: 100%; margin-top: 20px;">
+        <div class="f-left">
+            <button id="btnExcluir" class="btn-m" type="button" onclick="excluirFuncionario()">
+                Excluir
+            </button>
+        </div>
+
+        <div class="f-right">
+            <a class="btn-b" href="mercatto-Funcionarios.html">Cancelar</a>
+
+            <button id="btnSalvar" class="btn-m" type="button">
+                Salvar
+            </button>
+        </div>
+    </div>
+    
+
+
+</body>
+<script src="js/script.js"></script>
+<script>
+   document.addEventListener("DOMContentLoaded", initTelaFuncionario);
+
+    document.getElementById("fotoFuncionario").addEventListener("change", function () {
+    const file = this.files[0];
+
+    if (file) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            document.getElementById("previewFotoFuncionario").src = e.target.result;
+        };
+
+        reader.readAsDataURL(file);
+    }
+    
+});
+</script>
+
+</html>

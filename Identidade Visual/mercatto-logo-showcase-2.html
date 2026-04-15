@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mercatto — Logo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Syne:wght@700;800&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #0f0f14;
+    color: #f0f0f0;
+    min-height: 100vh;
+  }
+
+  header {
+    padding: 2rem 4rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  header h1 { font-family: 'Syne', sans-serif; font-size: 0.9rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #FF6B35; }
+  header span { font-size: 0.75rem; color: #555; letter-spacing: 0.05em; }
+
+  .showcase {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .variant-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 1.2rem;
+  }
+
+  /* ─── VARIANT 1: Light ─── */
+  .v-light {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 4rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ─── VARIANT 2: Dark ─── */
+  .v-dark {
+    background: #0d0d14;
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 20px;
+    padding: 4rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ─── VARIANT 3: Brand color bg ─── */
+  .v-brand {
+    background: linear-gradient(135deg, #FF6B35, #F7931E, #FFD23F);
+    border-radius: 20px;
+    padding: 4rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* ─── VARIANT 4: Icon only row ─── */
+  .v-icons {
+    background: #16161f;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 20px;
+    padding: 3rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+  }
+
+  /* ─── THE LOGOS ─── */
+
+  /* LOGO LIGHT (on white) */
+  .logo-light {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .icon-wrap {
+    position: relative;
+  }
+
+  .icon-box {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #FF6B35, #F7931E, #FFD23F);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 30px rgba(255,107,53,0.35);
+    flex-shrink: 0;
+  }
+
+  .icon-box-sm {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+  }
+
+  .icon-box-lg {
+    width: 96px;
+    height: 96px;
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(255,107,53,0.4);
+  }
+
+  .icon-inner svg { display: block; }
+
+  .wordmark-light {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+  }
+
+  .wm-main-light {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #1a1a2e;
+    line-height: 1;
+  }
+
+  .wm-main-light span { color: #FF6B35; }
+
+  .wm-sub-light {
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #aaa;
+    margin-top: 0.4rem;
+  }
+
+  /* LOGO DARK (on dark bg) */
+  .wm-main-dark {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    line-height: 1;
+  }
+  .wm-main-dark span { color: #FF6B35; }
+
+  .wm-sub-dark {
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.35);
+    margin-top: 0.4rem;
+  }
+
+  /* LOGO on gradient */
+  .icon-box-white {
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+    border: 1.5px solid rgba(255,255,255,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+  }
+
+  .wm-main-white {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: #fff;
+    line-height: 1;
+  }
+  .wm-main-white span { color: rgba(255,255,255,0.6); }
+
+  .wm-sub-white {
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-top: 0.4rem;
+  }
+
+  /* Icon SVG (the M mark) */
+  .m-mark { position: relative; }
+
+  /* Icon sizes for standalone */
+  .icon-standalone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .icon-standalone span {
+    font-size: 0.65rem;
+    color: #444;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  /* Divider */
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,0.05);
+  }
+
+  /* Rule strip */
+  .color-strip {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .swatch {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+  }
+  .swatch-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .swatch-info { line-height: 1.3; }
+  .swatch-name { font-size: 0.75rem; font-weight: 500; color: #ccc; }
+  .swatch-hex { font-size: 0.65rem; color: #555; letter-spacing: 0.05em; font-family: monospace; }
+
+  .colors-section {
+    background: #13131a;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 2.5rem 3rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mercatto — Brand Identity</h1>
+  <span>Logo & Variações</span>
+</header>
+
+<div class="showcase">
+
+  <!-- LIGHT VERSION -->
+  <div>
+    <div class="variant-label">Versão clara — fundo branco</div>
+    <div class="v-light">
+      <div class="logo-light">
+        <div class="icon-box">
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+            <!-- Awning arc -->
+            <path d="M 7 16 Q 23 8 39 16" stroke="rgba(255,255,255,0.5)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <!-- M letterform -->
+            <rect x="7" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+            <rect x="33.5" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+            <path d="M 7 19 L 23 30 L 23 37 L 7 27 Z" fill="white"/>
+            <path d="M 39 19 L 23 30 L 23 37 L 39 27 Z" fill="white"/>
+            <!-- Center dot -->
+            <circle cx="23" cy="34" r="3" fill="#FF6B35"/>
+            <circle cx="23" cy="34" r="1.5" fill="white" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="wordmark-light">
+          <div class="wm-main-light">merc<span>atto</span></div>
+          <div class="wm-sub-light">sistema de vendas</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DARK VERSION -->
+  <div>
+    <div class="variant-label">Versão escura — fundo dark</div>
+    <div class="v-dark">
+      <div class="logo-light">
+        <div class="icon-box" style="box-shadow: 0 8px 30px rgba(255,107,53,0.4)">
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+            <path d="M 7 16 Q 23 8 39 16" stroke="rgba(255,255,255,0.5)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <rect x="7" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+            <rect x="33.5" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+            <path d="M 7 19 L 23 30 L 23 37 L 7 27 Z" fill="white"/>
+            <path d="M 39 19 L 23 30 L 23 37 L 39 27 Z" fill="white"/>
+            <circle cx="23" cy="34" r="3" fill="#FF6B35"/>
+            <circle cx="23" cy="34" r="1.5" fill="white" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="wordmark-light">
+          <div class="wm-main-dark">merc<span>atto</span></div>
+          <div class="wm-sub-dark">sistema de vendas</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BRAND BG VERSION -->
+  <div>
+    <div class="variant-label">Versão colorida — fundo gradiente</div>
+    <div class="v-brand">
+      <div class="logo-light">
+        <div class="icon-box-white">
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+            <path d="M 7 16 Q 23 8 39 16" stroke="rgba(255,255,255,0.6)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <rect x="7" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+            <rect x="33.5" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+            <path d="M 7 19 L 23 30 L 23 37 L 7 27 Z" fill="white"/>
+            <path d="M 39 19 L 23 30 L 23 37 L 39 27 Z" fill="white"/>
+            <circle cx="23" cy="34" r="3" fill="rgba(255,107,53,0.7)"/>
+            <circle cx="23" cy="34" r="1.5" fill="white" opacity="0.9"/>
+          </svg>
+        </div>
+        <div class="wordmark-light">
+          <div class="wm-main-white">merc<span>atto</span></div>
+          <div class="wm-sub-white">sistema de vendas</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ICON ONLY SIZES -->
+  <div>
+    <div class="variant-label">Ícone isolado — múltiplos tamanhos</div>
+    <div class="v-icons">
+      <div class="icon-standalone">
+        <div class="icon-box" style="width:96px;height:96px;border-radius:24px;box-shadow:0 12px 40px rgba(255,107,53,0.4)">
+          <svg width="62" height="62" viewBox="0 0 46 46" fill="none">
+            <path d="M 7 16 Q 23 8 39 16" stroke="rgba(255,255,255,0.5)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <rect x="7" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+            <rect x="33.5" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+            <path d="M 7 19 L 23 30 L 23 37 L 7 27 Z" fill="white"/>
+            <path d="M 39 19 L 23 30 L 23 37 L 39 27 Z" fill="white"/>
+            <circle cx="23" cy="34" r="3" fill="#FF6B35"/>
+            <circle cx="23" cy="34" r="1.5" fill="white" opacity="0.9"/>
+          </svg>
+        </div>
+        <span>96px</span>
+      </div>
+      <div class="icon-standalone">
+        <div class="icon-box" style="box-shadow:0 8px 25px rgba(255,107,53,0.35)">
+          <svg width="46" height="46" viewBox="0 0 46 46" fill="none">
+            <path d="M 7 16 Q 23 8 39 16" stroke="rgba(255,255,255,0.5)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <rect x="7" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+            <rect x="33.5" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+            <path d="M 7 19 L 23 30 L 23 37 L 7 27 Z" fill="white"/>
+            <path d="M 39 19 L 23 30 L 23 37 L 39 27 Z" fill="white"/>
+            <circle cx="23" cy="34" r="3" fill="#FF6B35"/>
+            <circle cx="23" cy="34" r="1.5" fill="white" opacity="0.9"/>
+          </svg>
+        </div>
+        <span>72px</span>
+      </div>
+      <div class="icon-standalone">
+        <div class="icon-box" style="width:48px;height:48px;border-radius:12px;box-shadow:0 4px 16px rgba(255,107,53,0.3)">
+          <svg width="32" height="32" viewBox="0 0 46 46" fill="none">
+            <path d="M 7 16 Q 23 8 39 16" stroke="rgba(255,255,255,0.5)" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <rect x="7" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+            <rect x="33.5" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+            <path d="M 7 19 L 23 30 L 23 37 L 7 27 Z" fill="white"/>
+            <path d="M 39 19 L 23 30 L 23 37 L 39 27 Z" fill="white"/>
+            <circle cx="23" cy="34" r="3" fill="#FF6B35"/>
+            <circle cx="23" cy="34" r="1.5" fill="white" opacity="0.9"/>
+          </svg>
+        </div>
+        <span>48px</span>
+      </div>
+      <div class="icon-standalone">
+        <div class="icon-box" style="width:32px;height:32px;border-radius:8px;box-shadow:0 2px 10px rgba(255,107,53,0.25)">
+          <svg width="20" height="20" viewBox="0 0 46 46" fill="none">
+            <rect x="7" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+            <rect x="33.5" y="19" width="5.5" height="18" rx="1.5" fill="white"/>
+            <path d="M 7 19 L 23 30 L 23 37 L 7 27 Z" fill="white"/>
+            <path d="M 39 19 L 23 30 L 23 37 L 39 27 Z" fill="white"/>
+            <circle cx="23" cy="34" r="3.5" fill="rgba(255,255,255,0.9)"/>
+          </svg>
+        </div>
+        <span>32px</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLOR PALETTE -->
+  <div class="colors-section">
+    <div class="variant-label" style="margin-bottom:1.5rem;">Paleta de cores</div>
+    <div class="color-strip">
+      <div class="swatch">
+        <div class="swatch-circle" style="background:#FF6B35;box-shadow:0 4px 12px rgba(255,107,53,0.4)"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Laranja Principal</div>
+          <div class="swatch-hex">#FF6B35</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-circle" style="background:#F7931E"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Âmbar</div>
+          <div class="swatch-hex">#F7931E</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-circle" style="background:#FFD23F"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Dourado</div>
+          <div class="swatch-hex">#FFD23F</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-circle" style="background:#1A1A2E"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Azul Noite</div>
+          <div class="swatch-hex">#1A1A2E</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-circle" style="background:#ffffff;border:1px solid rgba(255,255,255,0.1)"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Branco</div>
+          <div class="swatch-hex">#FFFFFF</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
